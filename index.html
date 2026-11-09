@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Villa y la Gran Guerra — Centro Internacional de Divulgación Científica e Histórica del Norte de México</title>
+  <meta name="description" content="Plataforma digital de divulgación histórica, turismo cultural y experiencias en torno a Agua Prieta 1915 y el patrimonio del norte de México." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><!-- Este de aqui es para-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> <!-- Este de aqui es para-->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ Cabecera / Header (Nav Menu) ============ -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand" aria-label="Villa y la Gran Guerra — Inicio">
+        <!-- <span class="brand__mark" aria-hidden="true">V</span>  esto es para poner nomas la letra V en un cuadrito como de  -->
+        <span class="brand__name">
+          Villa y la Gran Guerra
+          <small>Norte de México</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="index.html" aria-current="page">Índice</a>
+        <a href="historia.html">Historia</a>
+        <a href="turismo.html">Turismo</a>
+        <a href="#">Sonora</a>
+        <a href="#">Experiencias</a>
+        <a href="#">Museo Vivo</a>
+        <a href="#">Campo de Batalla</a>
+        <a href="#">Colecciones</a>
+        <a href="#">Noticias</a>
+        <a href="#">Contacto</a>
+      </nav>
+      <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ Portada / Aquí se pone a Pancho Villa (Agregar foto)============ -->
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="container hero__content">
+      <p class="hero__eyebrow">Centro Internacional de Divulgación Científica e Histórica</p>
+      <h1 class="hero__title">
+        VILLA
+        <em>y la</em>
+        GRAN GUERRA
+      </h1>
+      <p class="hero__lead">
+        La frontera donde la Revolución cambió de rumbo.
+        Agua Prieta, Sonora · 1915.
+      </p>
+      <div class="hero__actions">
+        <a href="historia.html" class="btn btn--primary">Descubrir la historia</a>
+        <a href="turismo.html" class="btn btn--outline">Explorar el territorio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CAPÍTULOS DESTACADOS (Un ejemplo más o menos visual viene al final de la guia) ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Capítulos</span>
+        <h2>Una historia que se recorre por capítulos</h2>
+        <p class="lead">Seis entradas editoriales para descubrir cómo una ciudad fronteriza se volvió clave en la Revolución Mexicana.</p>
+      </div>
+
+      <div class="chapters">
+        <a href="historia.html" class="chapter reveal">
+          <div class="chapter__media"><img src="" alt="Los constitucionalistas" loading="lazy" /></div>
+          <span class="chapter__label">Los constitucionalistas</span>
+        </a>
+        <a href="historia.html" class="chapter reveal">
+          <div class="chapter__media"><img src="" alt="La defensa de Agua Prieta" loading="lazy" /></div>
+          <span class="chapter__label">La defensa de Agua Prieta</span>
+        </a>
+        <a href="historia.html" class="chapter reveal">
+          <div class="chapter__media"><img src="" alt="La carga de caballería" loading="lazy" /></div>
+          <span class="chapter__label">La carga de caballería</span>
+        </a>
+        <a href="historia.html" class="chapter reveal">
+          <div class="chapter__media"><img src="" alt="Agua Prieta 1915" loading="lazy" /></div>
+          <span class="chapter__label">Agua Prieta 1915: donde una frontera detuvo a Pancho Villa</span>
+        </a>
+        <a href="#" class="chapter reveal">
+          <div class="chapter__media"><img src="" alt="Banquetes de la Revolución" loading="lazy" /></div>
+          <span class="chapter__label">Banquetes y vida cotidiana en la Revolución</span>
+        </a>
+        <a href="#" class="chapter reveal">
+          <div class="chapter__media"><img src="" alt="Investigación" loading="lazy" /></div>
+          <span class="chapter__label">Investigación: la Revolución a través de archivos</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Explora Sonora  (Aquí se llevara lo que son los anuncios de forma lateral) ============ -->
+  <section class="section section--tight" style="background: var(--c-bg-alt);">
+    <div class="container">
+      <div class="layout-with-sidebar">
+        <div>
+          <div class="section-head">
+            <span class="eyebrow">Explora el territorio</span>
+            <h2>Sonora: el gran contenedor territorial</h2>
+            <p class="lead">Historia, patrimonio, turismo, cultura y conocimiento se conectan en un mismo ecosistema.</p>
+          </div>
+
+          <div class="chapters" style="grid-template-columns: repeat(2, 1fr);">
+            <a href="turismo.html" class="card reveal">
+              <div class="card__media"><img src="" alt="Turismo cultural" loading="lazy" /></div>
+              <div class="card__body">
+                <p class="card__kicker">Turismo</p>
+                <h3 class="card__title">Turismo cultural</h3>
+                <p class="card__text">Descubre la historia y las expresiones culturales de Agua Prieta.</p>
+              </div>
+            </a>
+            <a href="turismo.html" class="card reveal">
+              <div class="card__media"><img src="" alt="Patrimonio histórico" loading="lazy" /></div>
+              <div class="card__body">
+                <p class="card__kicker">Historia y patrimonio</p>
+                <h3 class="card__title">Patrimonio histórico</h3>
+                <p class="card__text">Lugares que conservan la memoria de nuestra ciudad.</p>
+              </div>
+            </a>
+            <a href="historia.html" class="card reveal">
+              <div class="card__media"><img src="" alt="Experiencias históricas" loading="lazy" /></div>
+              <div class="card__body">
+                <p class="card__kicker">Experiencias</p>
+                <h3 class="card__title">Experiencias históricas</h3>
+                <p class="card__text">No te conformes con conocer una fecha: comprende lo que sucedió.</p>
+              </div>
+            </a>
+            <a href="#" class="card reveal">
+              <div class="card__media"><img src="" alt="Museo vivo" loading="lazy" /></div>
+              <div class="card__body">
+                <p class="card__kicker">Museo Vivo</p>
+                <h3 class="card__title">El pasado con herramientas del futuro</h3>
+                <p class="card__text">Mapas interactivos, reconstrucciones digitales y archivos vivos.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- SIDEBAR PUBLICIDAD STICKY (desktop) -->
+        <aside class="sidebar-ad" aria-label="Publicidad">
+          <span class="ad-label">Publicidad</span>
+          <a href="#" class="ad-card" data-ad="cordental">
+            <div class="ad-card__media" role="img" aria-label="CORDENTAL, turismo médico en Agua Prieta"></div>
+            <div class="ad-card__body">
+              <p class="ad-card__sponsor">Alimentos · Agua Prieta</p>
+              <h4>Tortilleria Any</h4>
+              <p>No somos las unicas, pero si las mejores.</p>
+              <span class="btn btn--ghost btn--sm">Conocer más</span>
+            </div>
+          </a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Sección / Cita Final ============ -->
+  <section class="section">
+    <div class="container text-center">
+      <div class="ornament" aria-hidden="true">✦</div>
+      <h2>Ven por una historia.<br/>Descubre todo un territorio.</h2>
+      <p class="lead" style="max-width: 620px; margin: 1rem auto 2rem;">
+        Villa y la Gran Guerra es una plataforma de divulgación histórica, turismo cultural
+        y experiencias del norte de México. Cada visitante es un embajador.
+      </p>
+      <a href="turismo.html" class="btn btn--primary">Comenzar la experiencia</a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Villa y la Gran Guerra</h4>
+          <p style="color: rgba(251,245,232,.7); max-width: 320px;">
+            Centro Internacional de Divulgación Científica e Histórica del Norte de México.
+            Investigación, patrimonio y territorio desde Agua Prieta, Sonora.
+          </p>
+        </div>
+        <div>
+          <h4>Secciones</h4>
+          <ul>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="turismo.html">Turismo</a></li>
+            <li><a href="#">Sonora</a></li>
+            <li><a href="#">Experiencias</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Investigación</h4>
+          <ul>
+            <li><a href="#">Museo Vivo</a></li>
+            <li><a href="#">Campo de Batalla</a></li>
+            <li><a href="#">Colecciones</a></li>
+            <li><a href="#">Archivo</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="#">Prensa</a></li>
+            <li><a href="#">Colaboraciones</a></li>
+            <li><a href="#">Publicidad</a></li>
+            <li><a href="#">Aviso legal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Villa y la Gran Guerra · ITAP</span>
+        <span>Agua Prieta, Sonora · Norte de México</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
