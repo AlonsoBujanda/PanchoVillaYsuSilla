@@ -892,3 +892,332 @@ p:last-child { margin-bottom: 0; }
   .footer-grid { grid-template-columns: 1fr; }
   .article-body > p:first-of-type::first-letter { font-size: 3.2rem; }
 }
+
+/* ---------- 16. HUB EDITORIAL / FILTROS ---------- */
+.hub-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding: 1rem 0 1.5rem;
+  border-bottom: 1px solid var(--c-border);
+  margin-bottom: 2rem;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .45rem .9rem;
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .03em;
+  background: var(--c-paper);
+  border: 1px solid var(--c-border-d);
+  border-radius: 999px;
+  color: var(--c-ink-soft);
+  transition: all var(--t-fast);
+}
+.chip:hover { border-color: var(--c-primary); color: var(--c-primary); }
+.chip.is-active {
+  background: var(--c-primary);
+  border-color: var(--c-primary);
+  color: var(--c-paper);
+}
+
+.listing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+.listing--2col { grid-template-columns: repeat(2, 1fr); }
+
+/* ---------- 17. PERFIL DE NEGOCIO (ecosistema comercial) ---------- */
+.biz-card {
+  display: grid;
+  grid-template-columns: 96px 1fr auto;
+  gap: 1.2rem;
+  align-items: center;
+  padding: 1.2rem 1.3rem;
+  background: var(--c-paper);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  transition: box-shadow var(--t-base), transform var(--t-base);
+}
+.biz-card:hover { box-shadow: var(--sh-md); transform: translateY(-2px); }
+.biz-card__logo {
+  width: 96px; height: 96px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--c-bg-alt);
+  display: grid; place-items: center;
+  font-family: var(--f-display);
+  font-weight: 700;
+  color: var(--c-primary);
+  font-size: 1.4rem;
+}
+.biz-card__logo img { width: 100%; height: 100%; object-fit: cover; }
+.biz-card__body h3 { font-size: 1.15rem; margin-bottom: .3rem; }
+.biz-card__meta {
+  display: flex; flex-wrap: wrap; gap: .8rem;
+  font-size: .76rem; color: var(--c-ink-mute);
+  margin-bottom: .5rem;
+}
+.biz-card__meta span::before { content: '·'; margin-right: .4rem; color: var(--c-accent); }
+.biz-card__meta span:first-child::before { content: none; margin: 0; }
+.biz-card__desc { font-size: .88rem; color: var(--c-ink-soft); margin: 0; }
+.biz-card__actions { display: flex; flex-direction: column; gap: .4rem; }
+
+/* ---------- 18. FORMULARIO ---------- */
+.form { max-width: 640px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-group { display: flex; flex-direction: column; gap: .35rem; margin-bottom: 1.1rem; }
+.form-group label {
+  font-size: .74rem; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--c-ink-soft);
+}
+.form-control {
+  font: inherit; font-size: .95rem;
+  padding: .75rem .9rem;
+  background: var(--c-paper);
+  border: 1px solid var(--c-border-d);
+  border-radius: var(--radius-sm);
+  color: var(--c-ink);
+  transition: border-color var(--t-fast), box-shadow var(--t-fast);
+}
+.form-control:focus {
+  outline: none;
+  border-color: var(--c-primary);
+  box-shadow: 0 0 0 3px rgba(140,47,31,.12);
+}
+textarea.form-control { min-height: 140px; resize: vertical; }
+.form-check { display: flex; gap: .5rem; align-items: flex-start; font-size: .82rem; color: var(--c-ink-mute); }
+.form-check input { margin-top: .25rem; accent-color: var(--c-primary); }
+.form-success {
+  display: none;
+  padding: 1rem 1.2rem;
+  background: #e8f0e5;
+  border-left: 3px solid #5a8a3f;
+  border-radius: var(--radius-sm);
+  font-size: .9rem;
+  color: #2f5020;
+  margin-bottom: 1rem;
+}
+.form-success.is-visible { display: block; }
+
+/* ---------- 19. COLECCIONES ---------- */
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+.collection-item {
+  display: flex; flex-direction: column;
+  background: var(--c-paper);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: transform var(--t-base), box-shadow var(--t-base);
+}
+.collection-item:hover { transform: translateY(-3px); box-shadow: var(--sh-md); }
+.collection-item__media {
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--c-bg-alt);
+  position: relative;
+}
+.collection-item__media img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: sepia(.4) contrast(1.05);
+}
+.collection-item__tag {
+  position: absolute; top: .7rem; left: .7rem;
+  padding: .25rem .6rem;
+  background: rgba(36,26,20,.85);
+  color: var(--c-accent-l);
+  font-size: .62rem; letter-spacing: .14em;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+.collection-item__body { padding: 1rem 1.1rem 1.2rem; }
+.collection-item__body h3 { font-size: 1rem; margin-bottom: .25rem; }
+.collection-item__body p { font-size: .8rem; color: var(--c-ink-mute); margin: 0; }
+
+/* ---------- 20. MUSEO VIVO ---------- */
+.museum-viewer {
+  position: relative;
+  background: #0f0905;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  display: grid; place-items: center;
+}
+.museum-viewer__frame {
+  width: 100%; height: 100%;
+  background-image: url('https://picsum.photos/seed/museo-frame/1600/900');
+  background-size: cover; background-position: center;
+  filter: sepia(.5) contrast(1.1) brightness(.85);
+}
+.museum-viewer__overlay {
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  background: radial-gradient(circle at 50% 50%, transparent 30%, rgba(15,9,5,.85) 100%);
+}
+.museum-viewer__play {
+  width: 84px; height: 84px;
+  border-radius: 50%;
+  background: rgba(201,144,46,.95);
+  color: var(--c-ink);
+  display: grid; place-items: center;
+  font-size: 1.6rem;
+  border: 2px solid var(--c-accent-l);
+  cursor: pointer;
+  transition: transform var(--t-base), background var(--t-base);
+}
+.museum-viewer__play:hover { transform: scale(1.08); background: var(--c-accent-l); }
+.museum-viewer__caption {
+  position: absolute; left: 1.2rem; right: 1.2rem; bottom: 1.2rem;
+  padding: .9rem 1.1rem;
+  background: rgba(15,9,5,.82);
+  border-left: 3px solid var(--c-accent);
+  color: var(--c-paper);
+  font-size: .85rem;
+  border-radius: var(--radius-sm);
+}
+
+/* ---------- 21. CAMPO DE BATALLA ---------- */
+.battle-map {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: #1c130a;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--c-border-d);
+}
+.battle-map__layer {
+  position: absolute; inset: 0;
+  background-image: url('https://picsum.photos/seed/battle-map/1600/1000');
+  background-size: cover; background-position: center;
+  filter: sepia(.7) contrast(1.1) brightness(.75);
+}
+.battle-map__layer::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(28,19,10,.35) 0%, rgba(28,19,10,.85) 100%);
+}
+.battle-map__legend {
+  position: absolute; left: 1.2rem; bottom: 1.2rem;
+  background: rgba(15,9,5,.9);
+  border: 1px solid var(--c-border-d);
+  border-radius: var(--radius-sm);
+  padding: .9rem 1.1rem;
+  color: var(--c-paper);
+  font-size: .78rem;
+  display: flex; flex-direction: column; gap: .4rem;
+  max-width: 240px;
+}
+.battle-map__legend strong { color: var(--c-accent-l); font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; margin-bottom: .3rem; }
+.battle-map__dot {
+  display: inline-block;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  margin-right: .5rem;
+  vertical-align: middle;
+}
+.battle-map__dot--villa { background: #d87753; }
+.battle-map__dot--calles { background: #6a9bc4; }
+.battle-map__dot--civil { background: var(--c-accent); }
+
+/* ---------- 22. EXPERIENCIAS ---------- */
+.exp-package {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.6rem;
+  background: var(--c-paper);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  transition: box-shadow var(--t-base);
+}
+.exp-package:hover { box-shadow: var(--sh-md); }
+.exp-package h3 { font-size: 1.3rem; margin-bottom: .3rem; }
+.exp-package__meta {
+  display: flex; flex-wrap: wrap; gap: .8rem;
+  font-size: .78rem; color: var(--c-ink-mute);
+  margin-bottom: .6rem;
+}
+.exp-package__meta span::before { content: '·'; margin-right: .4rem; color: var(--c-accent); }
+.exp-package__meta span:first-child::before { content: none; margin: 0; }
+.exp-package__desc { font-size: .9rem; color: var(--c-ink-soft); margin: 0; }
+.exp-package__price {
+  text-align: right;
+  font-family: var(--f-display);
+  color: var(--c-primary);
+  font-size: 1.4rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.exp-package__price small {
+  display: block;
+  font-family: var(--f-body);
+  font-size: .68rem;
+  font-weight: 500;
+  color: var(--c-ink-mute);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-top: .2rem;
+}
+
+/* ---------- 23. VOY A AGUA PRIETA (embudo) ---------- */
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.quick-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem;
+  background: var(--c-paper);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  transition: all var(--t-base);
+}
+.quick-link:hover {
+  border-color: var(--c-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--sh-md);
+}
+.quick-link__icon {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--c-bg-alt);
+  display: grid; place-items: center;
+  font-family: var(--f-display);
+  color: var(--c-primary);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.quick-link__body h3 { font-size: 1rem; margin-bottom: .15rem; }
+.quick-link__body p { font-size: .8rem; color: var(--c-ink-mute); margin: 0; }
+
+/* ---------- 24. RESPONSIVE ADICIONAL ---------- */
+@media (max-width: 1080px) {
+  .listing { grid-template-columns: repeat(2, 1fr); }
+  .quick-links { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 720px) {
+  .listing, .listing--2col { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .biz-card { grid-template-columns: 72px 1fr; }
+  .biz-card__actions { grid-column: 1 / -1; flex-direction: row; flex-wrap: wrap; }
+  .biz-card__logo { width: 72px; height: 72px; font-size: 1rem; }
+  .exp-package { grid-template-columns: 1fr; }
+  .exp-package__price { text-align: left; }
+  .quick-links { grid-template-columns: 1fr; }
+  .museum-viewer { aspect-ratio: 4 / 3; }
+  .battle-map { aspect-ratio: 4 / 3; }
+  .battle-map__legend { font-size: .72rem; padding: .7rem .9rem; max-width: 180px; }
+}

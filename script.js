@@ -81,4 +81,46 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+    /* ---------- 7. Filtros de hub (Sonora, Noticias, Colecciones) ---------- */
+  document.querySelectorAll('[data-filter-group]').forEach(group => {
+    const chips = group.querySelectorAll('.chip');
+    const targetSel = group.getAttribute('data-filter-group');
+    const items = document.querySelectorAll(targetSel + ' [data-cat]');
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('is-active'));
+        chip.classList.add('is-active');
+        const filter = chip.getAttribute('data-filter');
+        items.forEach(item => {
+          const match = filter === 'all' || item.getAttribute('data-cat') === filter;
+          item.style.display = match ? '' : 'none';
+        });
+      });
+    });
+  });
+
+  /* ---------- 8. Validación de formularios ---------- */
+  document.querySelectorAll('form[data-validate]').forEach(form => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let valid = true;
+      form.querySelectorAll('[required]').forEach(field => {
+        if (!field.value.trim()) {
+          valid = false;
+          field.style.borderColor = '#b83a2b';
+        } else {
+          field.style.borderColor = '';
+        }
+      });
+      if (!valid) return;
+      const success = form.parentElement.querySelector('.form-success');
+      if (success) {
+        success.classList.add('is-visible');
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      form.reset();
+    });
+  });
+  
 });
