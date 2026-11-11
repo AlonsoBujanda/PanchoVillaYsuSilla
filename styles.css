@@ -476,7 +476,7 @@ p:last-child { margin-bottom: 0; }
 }
 .ad-card__media {
   aspect-ratio: 4 / 5;
-  background-image: url('IMG/Any1.jpg');
+  background-image: url('img/Any1.jpg');
   background-size: cover;
   background-position: center;
   filter: sepia(.3) saturate(1.1);
