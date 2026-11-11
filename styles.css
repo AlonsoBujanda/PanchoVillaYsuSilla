@@ -262,7 +262,11 @@ p:last-child { margin-bottom: 0; }
 .hero__bg {
   position: absolute;
   inset: 0;
+<<<<<<< HEAD
   background-image: url('IMG/clip_villa.gif'); /*Imagen de la seccion principal, la que sale al comienzo*/
+=======
+  background-image: url('img/clip_villa.gif'); /*Imagen de la seccion principal, la que sale al comienzo*/
+>>>>>>> origin/correcciones
   background-size: cover;
   background-position: center;
   filter: sepia(.55) contrast(1.05) saturate(.85);
