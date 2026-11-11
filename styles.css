@@ -476,10 +476,21 @@ p:last-child { margin-bottom: 0; }
 }
 .ad-card__media {
   aspect-ratio: 4 / 5;
-  background-image: url('img/Any1.jpg');
+  background-color: #2a1a0f;
   background-size: cover;
   background-position: center;
   filter: sepia(.3) saturate(1.1);
+}
+/* Imagen propia de cada anunciante */
+.ad-card__media--cordental { background-image: url('img/cordental.jpeg'); }
+.ad-card__media--any { background-image: url('img/Any1.jpg'); }
+.ad-card__media--hotel-plaza { background-image: url('img/hotelplaza.jpeg'); }
+.ad-card__media--hotel {
+  background-image: url('img/hotelfrontera.jpg');}
+.ad-card__media--lems {
+  background-image: url('img/Lems\ Dental.jpg');}
+.ad-card__media--libre {
+  background-image: radial-gradient(circle at 70% 30%, rgba(201,144,46,.35) 0%, transparent 55%), linear-gradient(160deg, #2a1a0f 0%, #1a0f08 100%);
 }
 .ad-card__body { padding: 1rem 1.1rem 1.2rem; }
 .ad-card__body h4 {
@@ -521,10 +532,14 @@ p:last-child { margin-bottom: 0; }
 }
 .article-hero__bg {
   position: absolute; inset: 0;
-  background-image: url('IMG/villa_batalla.gif');
+  background-image: url('IMG/fotografia.png');
   background-size: cover;
   background-position: center;
   filter: sepia(.6) contrast(1.05) brightness(.7);
+}
+/* GIF compartido por Historia y Colecciones */
+.article-hero__bg--historia {
+  background-image: url('img/villa_batalla.gif');
 }
 .article-hero__bg::after {
   content: '';
@@ -697,7 +712,7 @@ p:last-child { margin-bottom: 0; }
 }
 .turismo-hero__bg {
   position: absolute; inset: 0;
-  background-image: url('https://picsum.photos/seed/aguaprieta-turismo/1600/800');
+  background-image: url('IMG/arcos_viejos.png');
   background-size: cover;
   background-position: center;
   filter: sepia(.4) contrast(1.05) brightness(.75);
