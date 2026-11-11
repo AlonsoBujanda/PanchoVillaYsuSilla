@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Villa y la Gran Guerra — Centro Internacional de Divulgación Científica e Histórica del Norte de México</title>
+  <meta name="description" content="Plataforma digital de divulgación histórica, turismo cultural y experiencias en torno a Agua Prieta 1915 y el patrimonio del norte de México." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><!-- Este de aqui es para-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> <!-- Este de aqui es para-->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ Cabecera / Header (Nav Menu) ============ -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand" aria-label="Villa y la Gran Guerra — Inicio">
+        <!-- <span class="brand__mark" aria-hidden="true">V</span>  esto es para poner nomas la letra V en un cuadrito como de  -->
+        <span class="brand__name">
+          Villa y la Gran Guerra
+          <small>Norte de México</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="index.html">Índice</a>
+        <a href="historia.html">Historia</a>
+        <a href="turismo.html">Turismo</a>
+        <a href="sonora.html">Sonora</a>
+        <a href="experiencias.html">Experiencias</a>
+        <a href="#">Museo Vivo</a>
+        <a href="#">Campo de Batalla</a>
+        <a href="#">Colecciones</a>
+        <a href="#">Noticias</a>
+        <a href="contacto.html" aria-current="page">Contacto</a>
+      </nav>
+      <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+
+  <section class="section section--historia">
+    <div class="container">
+      <div class="layout-with-sidebar">
+
+        <div>
+          <div class="section-head">
+            <span class="eyebrow">Contacto</span>
+            <h1>¿Colaboramos?</h1>
+            <p class="lead">Prensa, colaboraciones, publicidad, experiencias o simplemente una pregunta sobre la historia. Escríbenos.</p>
+          </div>
+
+          <form class="form" data-validate>
+            <div class="form-success" role="status">Mensaje enviado. Te responderemos a la brevedad.</div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input class="form-control" id="nombre" name="nombre" type="text" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Correo</label>
+                <input class="form-control" id="email" name="email" type="email" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="asunto">Asunto</label>
+              <select class="form-control" id="asunto" name="asunto" required>
+                <option value="">Selecciona una opción</option>
+                <option>Prensa</option>
+                <option>Colaboración</option>
+                <option>Publicidad</option>
+                <option>Experiencias</option>
+                <option>Otro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea class="form-control" id="mensaje" name="mensaje" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="form-check">
+                <input type="checkbox" required>
+                <span>Acepto el aviso de privacidad y el tratamiento de mis datos.</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn--primary">Enviar mensaje</button>
+          </form>
+        </div>
+
+        <aside class="sidebar-ad" aria-label="Publicidad">
+          <span class="ad-label">Publicidad</span>
+          <a href="#" class="ad-card" data-ad="cordental-contacto">
+            <div class="ad-card__media" role="img" aria-label="CORDENTAL"></div>
+            <div class="ad-card__body">
+              <p class="ad-card__sponsor">Turismo médico · Agua Prieta</p>
+              <h4>CORDENTAL</h4>
+              <p>La belleza de tu sonrisa en manos de profesionales.</p>
+              <span class="btn btn--ghost btn--sm">Conocer más</span>
+            </div>
+          </a>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Villa y la Gran Guerra</h4>
+          <p style="color: rgba(251,245,232,.7); max-width: 320px;">
+            Centro Internacional de Divulgación Científica e Histórica del Norte de México.
+            Investigación, patrimonio y territorio desde Agua Prieta, Sonora.
+          </p>
+        </div>
+        <div>
+          <h4>Secciones</h4>
+          <ul>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="turismo.html">Turismo</a></li>
+            <li><a href="sonora.html">Sonora</a></li>
+            <li><a href="experiencias.html">Experiencias</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Investigación</h4>
+          <ul>
+            <li><a href="#">Museo Vivo</a></li>
+            <li><a href="#">Campo de Batalla</a></li>
+            <li><a href="#">Colecciones</a></li>
+            <li><a href="#">Archivo</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="contacto.html">Prensa</a></li>
+            <li><a href="contacto.html">Colaboraciones</a></li>
+            <li><a href="contacto.html">Publicidad</a></li>
+            <li><a href="#">Aviso legal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Villa y la Gran Guerra · ITAP</span>
+        <span>Agua Prieta, Sonora · Norte de México</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

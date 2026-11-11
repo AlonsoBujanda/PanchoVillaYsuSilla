@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Villa y la Gran Guerra — Centro Internacional de Divulgación Científica e Histórica del Norte de México</title>
+  <meta name="description" content="Plataforma digital de divulgación histórica, turismo cultural y experiencias en torno a Agua Prieta 1915 y el patrimonio del norte de México." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><!-- Este de aqui es para-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> <!-- Este de aqui es para-->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ Cabecera / Header (Nav Menu) ============ -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand" aria-label="Villa y la Gran Guerra — Inicio">
+        <!-- <span class="brand__mark" aria-hidden="true">V</span>  esto es para poner nomas la letra V en un cuadrito como de  -->
+        <span class="brand__name">
+          Villa y la Gran Guerra
+          <small>Norte de México</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="index.html">Índice</a>
+        <a href="historia.html">Historia</a>
+        <a href="turismo.html">Turismo</a>
+        <a href="sonora.html" aria-current="page">Sonora</a>
+        <a href="experiencias.html">Experiencias</a>
+        <a href="#">Museo Vivo</a>
+        <a href="#">Campo de Batalla</a>
+        <a href="#">Colecciones</a>
+        <a href="#">Noticias</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+<main>
+
+  <section class="section section--historia">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Sonora · Gran contenedor territorial</span>
+        <h1>Sonora no solo se recorre: se descubre.</h1>
+        <p class="lead">Desiertos, sierras, costa, ciudades fronterizas, pueblos históricos y comunidades con tradiciones diversas. Un mismo territorio, muchas historias.</p>
+      </div>
+
+      <!-- Filtros -->
+      <div class="hub-toolbar" data-filter-group="#sonora-grid">
+        <button class="chip is-active" data-filter="all">Todo</button>
+        <button class="chip" data-filter="turismo">Turismo</button>
+        <button class="chip" data-filter="historia">Historia y patrimonio</button>
+        <button class="chip" data-filter="cultura">Cultura</button>
+        <button class="chip" data-filter="conocimiento">Conocimiento y desarrollo</button>
+      </div>
+
+      <div id="sonora-grid" class="listing">
+
+        <a href="turismo.html" class="card" data-cat="turismo">
+          <div class="card__media"><img src="IMG/los_arcos.jpeg" alt="Turismo cultural" loading="lazy"></div>
+          <div class="card__body">
+            <p class="card__kicker">Turismo</p>
+            <h3 class="card__title">Turismo cultural en Sonora</h3>
+            <p class="card__text">Rutas, patrimonio y expresiones vivas del estado.</p>
+          </div>
+        </a>
+
+        <a href="#" class="card" data-cat="historia">
+          <div class="card__media"><img src="IMG/Cananea.jpg" alt="Historia de Sonora" loading="lazy"></div>
+          <div class="card__body">
+            <p class="card__kicker">Historia y patrimonio</p>
+            <h3 class="card__title">Historia de Sonora</h3>
+            <p class="card__text">De las misiones a la Revolución: procesos y memorias.</p>
+          </div>
+        </a>
+
+        <a href="#" class="card" data-cat="cultura">
+          <div class="card__media"><img src="IMG/artes.jpg" alt="Cultura sonorense" loading="lazy"></div>
+          <div class="card__body">
+            <p class="card__kicker">Cultura</p>
+            <h3 class="card__title">Arte y cultura sonorense</h3>
+            <p class="card__text">Música, danza, festivales e identidad regional.</p>
+          </div>
+        </a>
+
+        <a href="#" class="card" data-cat="conocimiento">
+          <div class="card__media"><img src="IMG/ciencia.jpg" alt="Ciencia y tecnología" loading="lazy"></div>
+          <div class="card__body">
+            <p class="card__kicker">Conocimiento</p>
+            <h3 class="card__title">Ciencia y tecnología</h3>
+            <p class="card__text">Investigación, innovación y desarrollo regional.</p>
+          </div>
+        </a>
+
+        <a href="#" class="card" data-cat="cultura">
+          <div class="card__media"><img src="IMG/gastronomia.jpg" alt="Gastronomía sonorense" loading="lazy"></div>
+          <div class="card__body">
+            <p class="card__kicker">Cultura</p>
+            <h3 class="card__title">Gastronomía sonorense</h3>
+            <p class="card__text">Carne asada, tortillas de harina, bacanora y memoria familiar.</p>
+          </div>
+        </a>
+
+        <a href="#" class="card" data-cat="historia">
+          <div class="card__media"><img src="IMG/arqueologia.png" alt="Arqueología" loading="lazy"></div>
+          <div class="card__body">
+            <p class="card__kicker">Historia y patrimonio</p>
+            <h3 class="card__title">Arqueología del norte</h3>
+            <p class="card__text">Sociedades antiguas a través de sus restos materiales.</p>
+          </div>
+        </a>
+
+        <a href="#" class="card" data-cat="conocimiento">
+          <div class="card__media"><img src="IMG/economia.jpg" alt="Economía naranja" loading="lazy"></div>
+          <div class="card__body">
+            <p class="card__kicker">Conocimiento</p>
+            <h3 class="card__title">Economía naranja</h3>
+            <p class="card__text">Creatividad, arte y cultura como motores de desarrollo.</p>
+          </div>
+        </a>
+
+        <a href="#" class="card" data-cat="turismo">
+          <div class="card__media"><img src="IMG/naturaleza.jpg" alt="Turismo de naturaleza" loading="lazy"></div>
+          <div class="card__body">
+            <p class="card__kicker">Turismo</p>
+            <h3 class="card__title">Naturaleza y aventura</h3>
+            <p class="card__text">Del desierto al golfo de California.</p>
+          </div>
+        </a>
+
+        <a href="#" class="card" data-cat="historia">
+          <div class="card__media"><img src="IMG/rutariosonora.jpg" alt="Rutas históricas" loading="lazy"></div>
+          <div class="card__body">
+            <p class="card__kicker">Historia y patrimonio</p>
+            <h3 class="card__title">Rutas históricas</h3>
+            <p class="card__text">Recorridos que conectan lugares y acontecimientos.</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" style="background: var(--c-bg-alt);">
+    <div class="container text-center">
+      <div class="ornament" aria-hidden="true">✦</div>
+      <h2>Noticias oficiales SECTUR</h2>
+      <p class="lead" style="max-width: 620px; margin: 1rem auto 2rem;">
+        Esta sección alojará las noticias y comunicados de la Secretaría de Turismo de Sonora, generando convenios y contenido verificado.
+      </p>
+      <a href="noticias.html" class="btn btn--primary">Ver noticias</a>
+    </div>
+  </section>
+
+</main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Villa y la Gran Guerra</h4>
+          <p style="color: rgba(251,245,232,.7); max-width: 320px;">
+            Centro Internacional de Divulgación Científica e Histórica del Norte de México.
+            Investigación, patrimonio y territorio desde Agua Prieta, Sonora.
+          </p>
+        </div>
+        <div>
+          <h4>Secciones</h4>
+          <ul>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="turismo.html">Turismo</a></li>
+            <li><a href="sonora.html">Sonora</a></li>
+            <li><a href="experiencias.html">Experiencias</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Investigación</h4>
+          <ul>
+            <li><a href="#">Museo Vivo</a></li>
+            <li><a href="#">Campo de Batalla</a></li>
+            <li><a href="#">Colecciones</a></li>
+            <li><a href="#">Archivo</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="contacto.html">Prensa</a></li>
+            <li><a href="contacto.html">Colaboraciones</a></li>
+            <li><a href="contacto.html">Publicidad</a></li>
+            <li><a href="#">Aviso legal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Villa y la Gran Guerra · ITAP</span>
+        <span>Agua Prieta, Sonora · Norte de México</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
