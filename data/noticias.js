@@ -6,7 +6,7 @@ window.DATA_NOTICIAS = {
       "catLabel": "Blog Villa Vencido",
       "titulo": "1915: la frontera donde la Revolución cambió de rumbo",
       "descripcion": "Una ciudad. Dos ejércitos. Un desenlace que dejó huella en la memoria de Sonora.",
-      "url": "historia.html",
+      "url": "noticias/1915-frontera.html",
       "meta": ["Lectura · 8 min", "Historia"],
       "patrocinado": false,
       "imagen": "https://picsum.photos/seed/not-1915/800/500"
@@ -61,7 +61,7 @@ window.DATA_NOTICIAS = {
       "catLabel": "Blog Villa Vencido",
       "titulo": "Una fotografía puede detener el tiempo. Un archivo puede devolverle la voz.",
       "descripcion": "Cómo se construye una colección confiable: procedencia, derechos y condición.",
-      "url": "colecciones.html",
+      "url": "noticias/archivo-voz.html",
       "meta": ["Lectura · 5 min", "Archivo"],
       "patrocinado": false,
       "imagen": "https://picsum.photos/seed/not-archivo/800/500"
@@ -100,12 +100,12 @@ window.DATA_NOTICIAS = {
       "imagen": "https://picsum.photos/seed/not-mapping/800/500"
     },
     {
-      "id": "ba-chicui",
+      "id": "bachicui",
       "cat": "editorial",
       "catLabel": "Blog Villa Vencido",
-      "titulo": "Ba-Chicui Festival de las Artes 2026: cultura que une generaciones",
+      "titulo": "Bachicui Festival de las Artes 2026: cultura que une generaciones",
       "descripcion": "La quinta edición del festival reunió cerca de 40 presentaciones gratuitas en Agua Prieta.",
-      "url": "#",
+      "url": "noticias/bachicui.html",
       "meta": ["Mayo 2026", "Cultura"],
       "patrocinado": false,
       "imagen": "https://picsum.photos/seed/not-bachicui/800/500"
