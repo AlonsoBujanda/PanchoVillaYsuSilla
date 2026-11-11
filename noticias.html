@@ -41,15 +41,15 @@
 
 <main>
 
-  <!-- ============ HERO DE SECCIÓN ============ -->
-  <section class="article-hero">
-    <div class="article-hero__bg" style="background-image: none; background-color: #2a1a0f;" aria-hidden="true"></div>
+  <section class="article-hero article-hero--noticias">
+    <div class="article-hero__bg" aria-hidden="true"></div>
     <div class="container article-hero__content">
       <span class="eyebrow">Noticias · Blog · Territorio</span>
       <h1 class="article-hero__title">El norte, en presente.</h1>
       <p class="article-hero__lead">
-        Investigación histórica, cultura, turismo y desarrollo regional.
-        Cuatro voces editoriales que conectan el pasado con lo que está pasando hoy.
+        Cuatro líneas editoriales: <strong>Blog Villa Vencido</strong> (editorial),
+        <strong>Blog de negocios</strong> (patrocinado), <strong>Blog de experiencias</strong> (turístico)
+        y <strong>Blog histórico</strong> (investigación). Filtra por categoría para encontrar lo que te interesa.
       </p>
       <div class="article-meta">
         <span>Actualizado continuamente</span>
@@ -58,45 +58,6 @@
     </div>
   </section>
 
-  <!-- ============ INTRO + RED DE CONTENIDO ============ -->
-  <section class="section section--tight">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Cuatro voces editoriales</span>
-        <h2>Una red de contenido, no un blog único</h2>
-        <p class="lead">
-          Cada línea editorial tiene un propósito distinto y un público propio.
-          Juntas generan páginas indexables, oportunidades de descubrimiento y
-          un ecosistema comercial integrado al contenido.
-        </p>
-      </div>
-
-      <div class="subcats" style="grid-template-columns: repeat(4, 1fr);">
-        <div class="subcat">
-          <span class="subcat__num">01</span>
-          <h3 class="subcat__title">Blog Villa Vencido</h3>
-          <p class="subcat__text">Contenido editorial propio. Investigación histórica y divulgación.</p>
-        </div>
-        <div class="subcat">
-          <span class="subcat__num">02</span>
-          <h3 class="subcat__title">Blog de negocios</h3>
-          <p class="subcat__text">Contenido patrocinado/editorial de los patrocinadores del ecosistema.</p>
-        </div>
-        <div class="subcat">
-          <span class="subcat__num">03</span>
-          <h3 class="subcat__title">Blog de experiencias</h3>
-          <p class="subcat__text">Contenido turístico: qué hacer, qué visitar, qué reservar.</p>
-        </div>
-        <div class="subcat">
-          <span class="subcat__num">04</span>
-          <h3 class="subcat__title">Blog histórico</h3>
-          <p class="subcat__text">Investigación y divulgación con fuentes y contexto.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ HUB DE NOTICIAS CON FILTROS + STICKY ============ -->
   <section class="section section--historia">
     <div class="container">
       <div class="layout-with-sidebar">
@@ -105,144 +66,23 @@
           <div class="section-head">
             <span class="eyebrow">Últimas publicaciones</span>
             <h2>Noticias y artículos</h2>
-            <p class="lead">
-              Filtra por línea editorial para encontrar lo que te interesa.
-              Cada tarjeta te lleva al artículo completo.
-            </p>
           </div>
 
-          <!-- Filtros por línea editorial -->
           <div class="hub-toolbar" data-filter-group="#noticias-grid">
             <button class="chip is-active" data-filter="all">Todo</button>
             <button class="chip" data-filter="editorial">Blog Villa Vencido</button>
             <button class="chip" data-filter="negocios">Blog de negocios</button>
             <button class="chip" data-filter="experiencias">Blog de experiencias</button>
             <button class="chip" data-filter="historico">Blog histórico</button>
-            <button class="chip" data-filter="sectur">SECTUR</button>
+            <button class="chip" data-filter="sectur">SETUR Sonora</button>
           </div>
 
           <div id="noticias-grid" class="listing">
+            <!-- Se llena dinámicamente desde data/noticias.json -->
+          </div>
 
-            <!-- Artículo 1 · Editorial -->
-            <a href="historia.html" class="card" data-cat="editorial">
-              <div class="card__media"><img src="https://picsum.photos/seed/not-1915/800/500" alt="Agua Prieta 1915" loading="lazy"></div>
-              <div class="card__body">
-                <p class="card__kicker">Blog Villa Vencido</p>
-                <h3 class="card__title">1915: la frontera donde la Revolución cambió de rumbo</h3>
-                <p class="card__text">Una ciudad. Dos ejércitos. Un desenlace que dejó huella en la memoria de Sonora.</p>
-                <div class="biz-card__meta" style="margin-top: .8rem;">
-                  <span>Lectura · 8 min</span><span>Historia</span>
-                </div>
-              </div>
-            </a>
+          <div id="paginacion-noticias"></div>
 
-            <!-- Artículo 2 · Histórico -->
-            <a href="#" class="card" data-cat="historico">
-              <div class="card__media"><img src="https://picsum.photos/seed/not-plan/800/500" alt="Plan de Agua Prieta" loading="lazy"></div>
-              <div class="card__body">
-                <p class="card__kicker">Blog histórico</p>
-                <h3 class="card__title">Plan de Agua Prieta, 1920: el documento que cambió el rumbo</h3>
-                <p class="card__text">Contexto, actores y consecuencias del pronunciamiento que marcó la Revolución.</p>
-                <div class="biz-card__meta" style="margin-top: .8rem;">
-                  <span>Lectura · 6 min</span><span>Investigación</span>
-                </div>
-              </div>
-            </a>
-
-            <!-- Artículo 3 · Experiencias -->
-            <a href="experiencias.html" class="card" data-cat="experiencias">
-              <div class="card__media"><img src="https://picsum.photos/seed/not-cena/800/500" alt="Cena temática Villa Vencido" loading="lazy"></div>
-              <div class="card__body">
-                <p class="card__kicker">Blog de experiencias</p>
-                <h3 class="card__title">Cena temática Villa Vencido: gastronomía e historia en la mesa</h3>
-                <p class="card__text">Un menú de época, presentación audiovisual y conversación con investigadores.</p>
-                <div class="biz-card__meta" style="margin-top: .8rem;">
-                  <span>Reservar</span><span>Agua Prieta</span>
-                </div>
-              </div>
-            </a>
-
-            <!-- Artículo 4 · Negocios -->
-            <a href="#" class="card" data-cat="negocios">
-              <div class="card__media"><img src="https://picsum.photos/seed/not-dental/800/500" alt="Turismo médico" loading="lazy"></div>
-              <div class="card__body">
-                <p class="card__kicker">Blog de negocios · CORDENTAL</p>
-                <h3 class="card__title">Por qué cada vez más visitantes buscan servicios odontológicos en la frontera</h3>
-                <p class="card__text">Un análisis del turismo médico en Agua Prieta y su crecimiento.</p>
-                <div class="biz-card__meta" style="margin-top: .8rem;">
-                  <span>Patrocinado</span><span>Turismo médico</span>
-                </div>
-              </div>
-            </a>
-
-            <!-- Artículo 5 · SECTUR -->
-            <a href="#" class="card" data-cat="sectur">
-              <div class="card__media"><img src="https://picsum.photos/seed/not-sectur/800/500" alt="Noticias SECTUR" loading="lazy"></div>
-              <div class="card__body">
-                <p class="card__kicker">SECTUR Sonora</p>
-                <h3 class="card__title">Noticias oficiales de la Secretaría de Turismo de Sonora</h3>
-                <p class="card__text">Comunicados, convocatorias y programas de la SECTUR para el norte del estado.</p>
-                <div class="biz-card__meta" style="margin-top: .8rem;">
-                  <span>Oficial</span><span>Sonora</span>
-                </div>
-              </div>
-            </a>
-
-            <!-- Artículo 6 · Editorial -->
-            <a href="colecciones.html" class="card" data-cat="editorial">
-              <div class="card__media"><img src="https://picsum.photos/seed/not-archivo/800/500" alt="Archivo y colecciones" loading="lazy"></div>
-              <div class="card__body">
-                <p class="card__kicker">Blog Villa Vencido</p>
-                <h3 class="card__title">Una fotografía puede detener el tiempo. Un archivo puede devolverle la voz.</h3>
-                <p class="card__text">Cómo se construye una colección confiable: procedencia, derechos y condición.</p>
-                <div class="biz-card__meta" style="margin-top: .8rem;">
-                  <span>Lectura · 5 min</span><span>Archivo</span>
-                </div>
-              </div>
-            </a>
-
-            <!-- Artículo 7 · Histórico -->
-            <a href="#" class="card" data-cat="historico">
-              <div class="card__media"><img src="https://picsum.photos/seed/not-aduana/800/500" alt="Antigua Aduana" loading="lazy"></div>
-              <div class="card__body">
-                <p class="card__kicker">Blog histórico</p>
-                <h3 class="card__title">La antigua Aduana de 1918: arquitectura y comercio fronterizo</h3>
-                <p class="card__text">El edificio que simboliza la relación entre Agua Prieta y Douglas, Arizona.</p>
-                <div class="biz-card__meta" style="margin-top: .8rem;">
-                  <span>Lectura · 4 min</span><span>Patrimonio</span>
-                </div>
-              </div>
-            </a>
-
-            <!-- Artículo 8 · Negocios -->
-            <a href="#" class="card" data-cat="negocios">
-              <div class="card__media"><img src="https://picsum.photos/seed/not-hotel/800/500" alt="Hotel Frontera" loading="lazy"></div>
-              <div class="card__body">
-                <p class="card__kicker">Blog de negocios · Hotel Frontera</p>
-                <h3 class="card__title">Qué considerar antes de reservar hospedaje en la frontera</h3>
-                <p class="card__text">Guía práctica para visitantes que buscan dormir cerca de la historia.</p>
-                <div class="biz-card__meta" style="margin-top: .8rem;">
-                  <span>Patrocinado</span><span>Hospedaje</span>
-                </div>
-              </div>
-            </a>
-
-            <!-- Artículo 9 · Experiencias -->
-            <a href="experiencias.html" class="card" data-cat="experiencias">
-              <div class="card__media"><img src="https://picsum.photos/seed/not-mapping/800/500" alt="Mapping campo de batalla" loading="lazy"></div>
-              <div class="card__body">
-                <p class="card__kicker">Blog de experiencias</p>
-                <h3 class="card__title">Mapping: recorre el campo de batalla con geolocalización</h3>
-                <p class="card__text">Geolocalización, trincheras y lectura del paisaje. Próximamente.</p>
-                <div class="biz-card__meta" style="margin-top: .8rem;">
-                  <span>Próximamente</span><span>Campo de Batalla</span>
-                </div>
-              </div>
-            </a>
-
-          </div><!-- /#noticias-grid -->
-
-          <!-- Publicidad móvil -->
           <div class="sponsored-inline" data-ad="noticias-movil">
             <span class="ad-label">Publicidad</span>
             <p><strong>CORDENTAL</strong> · Turismo médico en Agua Prieta. La belleza de tu sonrisa en manos de profesionales.</p>
@@ -251,7 +91,6 @@
 
         </div>
 
-        <!-- SIDEBAR STICKY -->
         <aside class="sidebar-ad" aria-label="Publicidad">
           <span class="ad-label">Publicidad</span>
           <a href="#" class="ad-card" data-ad="cordental-noticias">
@@ -278,20 +117,18 @@
     </div>
   </section>
 
-  <!-- ============ CONVOCATORIA SECTUR ============ -->
   <section class="section section--tight" style="background: var(--c-bg-alt);">
     <div class="container text-center">
       <div class="ornament" aria-hidden="true">✦</div>
       <h2>¿Tienes una noticia que contar?</h2>
       <p class="lead" style="max-width: 620px; margin: 1rem auto 2rem;">
         Instituciones, empresas y comunidades pueden enviar sus comunicados.
-        La sección SECTUR aloja noticias oficiales y genera convenios de colaboración.
+        La sección SETUR aloja noticias oficiales y genera convenios de colaboración.
       </p>
       <a href="contacto.html" class="btn btn--primary">Enviar comunicado</a>
     </div>
   </section>
 
-  <!-- ============ FUENTES Y CONSULTA ============ -->
   <section class="section section--tight" style="background: var(--c-bg-alt);">
     <div class="container">
       <div class="sources" aria-labelledby="fuentes-noticias">
@@ -305,6 +142,7 @@
           <li>INAH. Patrimonio histórico, arqueología y museos. <a href="https://www.inah.gob.mx/" target="_blank" rel="noopener">inah.gob.mx</a></li>
           <li>Mediateca INAH. Colecciones de fotografías, documentos y objetos históricos. <a href="https://mediateca.inah.gob.mx/" target="_blank" rel="noopener">mediateca.inah.gob.mx</a></li>
           <li>Gobierno de Sonora. Información territorial y cultural. <a href="https://www.sonora.gob.mx/" target="_blank" rel="noopener">sonora.gob.mx</a></li>
+          <li>SETUR Sonora. Noticias oficiales de la Secretaría de Economía y Turismo. <a href="https://economiayturismo.sonora.gob.mx/" target="_blank" rel="noopener">economiayturismo.sonora.gob.mx</a></li>
           <li>Sistema de Información Cultural (Secretaría de Cultura). <a href="https://sic.cultura.gob.mx/" target="_blank" rel="noopener">sic.cultura.gob.mx</a></li>
         </ol>
       </div>
@@ -360,6 +198,7 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+    <script src="data/noticias.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

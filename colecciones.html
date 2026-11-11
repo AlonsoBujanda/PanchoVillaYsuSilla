@@ -41,10 +41,8 @@
 
 <main>
 
-  <!-- =============== 2. PORTADA DE LA SECCIÓN (HERO)===================== -->
   <section class="article-hero">
-    <!-- TODO: reemplazar el fondo por una imagen -->
-    <div class="article-hero__bg" style="background-image: none; background-color: #2a1a0f;" aria-hidden="true"></div>
+    <div class="article-hero__bg" style="background-color: #2a1a0f;" aria-hidden="true"></div>
     <div class="container article-hero__content">
       <span class="eyebrow">Colecciones · Archivo y patrimonio</span>
       <h1 class="article-hero__title">Una fotografía puede detener el tiempo. Un archivo puede devolverle la voz.</h1>
@@ -52,67 +50,31 @@
         Fotografías, cartas, mapas, periódicos y objetos que permiten reconstruir
         distintas perspectivas del pasado, siempre con su procedencia a la vista.
       </p>
-      <div class="article-meta">
-        <span>Archivo en construcción</span>
-        <span>Agua Prieta, Sonora</span>
+      <div class="hero__actions mt-2">
+        <a href="#galeria" class="btn btn--primary">Explorar la colección</a>
+        <a href="contacto.html" class="btn btn--outline">Colaborar con el archivo</a>
       </div>
     </div>
   </section>
 
-
-  <section class="section section--tight">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Antes de explorar</span>
-        <h2>Cómo leer una pieza del archivo</h2>
-        <p class="lead">
-          Una imagen sin procedencia verificable no demuestra que represente el lugar,
-          la fecha o la persona que se le atribuye. Por eso cada pieza indica qué tipo de
-          material es.
-        </p>
-      </div>
-
-      <div class="criteria">
-        <!-- Condición 1: pieza original -->
-        <div class="criteria__item">
-          <span class="badge badge--original">Original</span>
-          <h3>Documento o fotografía de la época</h3>
-          <p>Material producido en el periodo que se estudia, con archivo y fecha identificados.</p>
-        </div>
-        <!-- Condición 2: reproducción -->
-        <div class="criteria__item">
-          <span class="badge badge--repro">Reproducción</span>
-          <h3>Copia de una pieza existente</h3>
-          <p>Digitalización o copia de un original conservado en otro archivo, con su fuente citada.</p>
-        </div>
-        <!-- Condición 3: interpretación -->
-        <div class="criteria__item">
-          <span class="badge badge--interp">Interpretación</span>
-          <h3>Ilustración o reconstrucción</h3>
-          <p>Imagen o mapa elaborado hoy para explicar. No es prueba documental.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== 4. GALERÍA DE LA COLECCIÓN + PUBLICIDAD ====================== -->
-  <section class="section section--historia">
+  <section class="section section--historia" id="galeria">
     <div class="container">
       <div class="layout-with-sidebar">
 
-        <!-- ---------- 4A. Columna principal ---------- -->
         <div>
-
           <div class="section-head">
             <span class="eyebrow">Explorar la colección</span>
             <h2>Piezas, imágenes y documentos</h2>
             <p class="lead">
-              Esta colección está en formación. Los campos marcados como «Por completar»
-              se llenarán conforme se verifique cada pieza.
+              Cada ficha indica si es <strong>Original</strong>, <strong>Reproducción</strong> o <strong>Interpretación</strong>.
+              Una imagen sin procedencia verificable no demuestra que represente el lugar, la fecha o la persona que se le atribuye.
+              Esta colección está en formación; los campos marcados como «Por verificar» se llenarán conforme se confirme cada pieza.
             </p>
+            <div style="margin-top: 1rem;">
+              <button class="btn btn--ghost btn--sm" id="btn-destacadas">Ver piezas destacadas</button>
+            </div>
           </div>
 
-          <!-- Filtros por tipo de material -->
           <div class="hub-toolbar" data-filter-group="#colecciones-grid">
             <button class="chip is-active" data-filter="all">Todo</button>
             <button class="chip" data-filter="fotografias">Fotografías</button>
@@ -122,137 +84,17 @@
             <button class="chip" data-filter="patrimonio">Patrimonio</button>
           </div>
 
-          <!-- Cuadrícula de piezas. Cada <article> es una "ficha de pieza". -->
           <div id="colecciones-grid" class="collection-grid">
-
-            <!-- Pieza 1 · Documento -->
-            <article class="collection-item" data-cat="documentos">
-              <div class="collection-item__media">
-                <span class="collection-item__tag">Documento</span>
-                <img src="IMG/plan_aguaprieta.jpg" alt="Plan de Agua Prieta, 1920" loading="lazy" />
-              </div>
-              <div class="collection-item__body">
-                <h3>Plan de Agua Prieta</h3>
-                <p>Documento proclamado en 1920, decisivo en la Revolución Mexicana.</p>
-                <dl class="collection-meta">
-                  <dt>Fecha</dt><dd>1920</dd>
-                  <dt>Autoría</dt><dd>Por completar</dd>
-                  <dt>Archivo</dt><dd>Por completar</dd>
-                  <dt>Derechos</dt><dd>Por verificar</dd>
-                </dl>
-                <span class="badge badge--pending">Condición por verificar</span>
-              </div>
-            </article>
-
-            <!-- Pieza 2 · Fotografía -->
-            <article class="collection-item" data-cat="fotografias">
-              <div class="collection-item__media">
-                <span class="collection-item__tag">Fotografía</span>
-                <img src="IMG/PanVilla1.jpg" alt="Retrato de Francisco Villa" loading="lazy" />
-              </div>
-              <div class="collection-item__body">
-                <h3>Francisco Villa</h3>
-                <p>Retrato del jefe de la División del Norte.</p>
-                <dl class="collection-meta">
-                  <dt>Fecha</dt><dd>Por completar</dd>
-                  <dt>Autoría</dt><dd>Por completar</dd>
-                  <dt>Archivo</dt><dd>Por completar</dd>
-                  <dt>Derechos</dt><dd>Por verificar</dd>
-                </dl>
-                <span class="badge badge--pending">Condición por verificar</span>
-              </div>
-            </article>
-
-            <!-- Pieza 3 · Patrimonio -->
-            <article class="collection-item" data-cat="patrimonio">
-              <div class="collection-item__media">
-                <span class="collection-item__tag">Patrimonio</span>
-                <img src="IMG/AntiguaAduana.jpeg" alt="Antigua Aduana de Agua Prieta" loading="lazy" />
-              </div>
-              <div class="collection-item__body">
-                <h3>Antigua Aduana</h3>
-                <p>Edificio concluido en 1918, símbolo del comercio fronterizo con Douglas, Arizona.</p>
-                <dl class="collection-meta">
-                  <dt>Fecha</dt><dd>1918 (edificio)</dd>
-                  <dt>Autoría</dt><dd>Por completar</dd>
-                  <dt>Archivo</dt><dd>Por completar</dd>
-                  <dt>Derechos</dt><dd>Por verificar</dd>
-                </dl>
-                <span class="badge badge--pending">Condición por verificar</span>
-              </div>
-            </article>
-
-            <!-- Pieza 4 · Mapa (pieza por elaborar) -->
-            <article class="collection-item" data-cat="mapas">
-              <div class="collection-item__media collection-item__media--empty">
-                <span class="collection-item__tag">Mapa</span>
-                <img src="IMG/mapa.jpeg" alt="Mapa del campo de batalla" loading="lazy" />
-              </div>
-              <div class="collection-item__body">
-                <h3>Mapa del campo de batalla</h3>
-                <p>Plano interpretativo de las posiciones y la geografía de Agua Prieta en 1915.</p>
-                <dl class="collection-meta">
-                  <dt>Fecha</dt><dd>Por completar</dd>
-                  <dt>Autoría</dt><dd>Por completar</dd>
-                  <dt>Archivo</dt><dd>Por completar</dd>
-                  <dt>Derechos</dt><dd>Por completar</dd>
-                </dl>
-                <span class="badge badge--interp">Interpretación (por elaborar)</span>
-              </div>
-            </article>
-
-            <!-- Pieza 5 · Prensa (pieza por localizar) -->
-            <article class="collection-item" data-cat="prensa">
-              <div class="collection-item__media collection-item__media--empty">
-                <span class="collection-item__tag">Prensa</span>
-                <img src="IMG/prensa.jpeg" alt="Prensa de la epoca" loading="lazy" />
-              </div>
-              <div class="collection-item__body">
-                <h3>Prensa de la época</h3>
-                <p>Periódicos de ambos lados de la frontera para contrastar versiones del combate.</p>
-                <dl class="collection-meta">
-                  <dt>Fecha</dt><dd>Por completar</dd>
-                  <dt>Autoría</dt><dd>Por completar</dd>
-                  <dt>Archivo</dt><dd>Por completar</dd>
-                  <dt>Derechos</dt><dd>Por completar</dd>
-                </dl>
-                <span class="badge badge--pending">Pieza por localizar</span>
-              </div>
-            </article>
-
-            <!-- Pieza 6 · Documentos (pieza por localizar) -->
-            <article class="collection-item" data-cat="documentos">
-              <div class="collection-item__media collection-item__media--empty">
-                <span class="collection-item__tag">Documento</span>
-                <img src="IMG/documento.jpeg" alt="imagen" loading="lazy" />
-              </div>
-              <div class="collection-item__body">
-                <h3>Cartas y partes militares</h3>
-                <p>Testimonios escritos de quienes participaron o vivieron los hechos.</p>
-                <dl class="collection-meta">
-                  <dt>Fecha</dt><dd>Por completar</dd>
-                  <dt>Autoría</dt><dd>Por completar</dd>
-                  <dt>Archivo</dt><dd>Por completar</dd>
-                  <dt>Derechos</dt><dd>Por completar</dd>
-                </dl>
-                <span class="badge badge--pending">Pieza por localizar</span>
-              </div>
-            </article>
-
+            <!-- Se llena dinámicamente desde data/colecciones.json -->
           </div>
 
-          <!-- Publicidad en móvil  -->
           <div class="sponsored-inline" data-ad="espacio-colecciones-movil">
             <span class="ad-label">Publicidad</span>
             <p><strong>Espacio disponible.</strong> Tu negocio puede acompañar esta colección.</p>
             <a href="contacto.html" class="btn btn--ghost btn--sm">Conocer opciones</a>
           </div>
+        </div>
 
-        </div><!-- /4A -->
-
-        <!-- ---------- 4B. Publicidad escritorio ----------
-             Texto de ejemplo: reemplazar por un patrocinador real y mantener
-             siempre la etiqueta "Publicidad". -->
         <aside class="sidebar-ad" aria-label="Publicidad">
           <span class="ad-label">Publicidad</span>
           <a href="contacto.html" class="ad-card" data-ad="espacio-colecciones">
@@ -270,7 +112,6 @@
     </div>
   </section>
 
-  <!-- =========== 5. CONVOCATORIA A LA COMUNIDAD===================================== -->
   <section class="section section--tight" style="background: var(--c-bg-alt);">
     <div class="container">
       <div class="experience-cta" style="margin: 0;">
@@ -284,7 +125,6 @@
     </div>
   </section>
 
-  <!-- ========6. CONTENIDO RELACIONADO======================================== -->
   <section class="section">
     <div class="container">
       <div class="section-head">
@@ -317,13 +157,6 @@
     </div>
   </section>
 
-  <!-- =====================================================================
-       7. FUENTES Y CONSULTA
-       Estas instituciones son las listadas en la investigación del
-       proyecto. Son lugares donde consultar colecciones; no significa que
-       las piezas de esta página provengan de ellas hasta que se indique
-       en cada ficha.
-       ===================================================================== -->
   <section class="section section--tight" style="background: var(--c-bg-alt);">
     <div class="container">
       <div class="sources" aria-labelledby="fuentes-colecciones">
@@ -393,6 +226,9 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+
+
+    <script src="data/colecciones.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
