@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colecciones y archivo — Villa y la Gran Guerra</title>
+  <meta name="description" content="Fotografías, documentos, mapas, prensa y objetos históricos de Agua Prieta y el norte de México, con su fecha, autoría, procedencia y condición de reproducción." />
+  <meta property="og:title" content="Colecciones y archivo — Villa y la Gran Guerra" />
+  <meta property="og:description" content="Una fotografía puede detener el tiempo. Un archivo puede devolverle la voz." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- =============== 1. CABECERA / MENÚ PRINCIPAL ============ -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand" aria-label="Villa y la Gran Guerra — Inicio">
+        <span class="brand__name">Villa y la Gran Guerra<small>Norte de México</small></span>
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="index.html">Índice</a>
+        <a href="historia.html">Historia</a>
+        <a href="turismo.html">Turismo</a>
+        <a href="sonora.html">Sonora</a>
+        <a href="experiencias.html">Experiencias</a>
+        <a href="#">Museo Vivo</a>
+        <a href="#">Campo de Batalla</a>
+        <a href="colecciones.html" aria-current="page">Colecciones</a>
+        <a href="noticias.html">Noticias</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+      <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+<main>
+
+  <!-- =============== 2. PORTADA DE LA SECCIÓN (HERO)===================== -->
+  <section class="article-hero">
+    <!-- TODO: reemplazar el fondo por una imagen -->
+    <div class="article-hero__bg" style="background-image: none; background-color: #2a1a0f;" aria-hidden="true"></div>
+    <div class="container article-hero__content">
+      <span class="eyebrow">Colecciones · Archivo y patrimonio</span>
+      <h1 class="article-hero__title">Una fotografía puede detener el tiempo. Un archivo puede devolverle la voz.</h1>
+      <p class="article-hero__lead">
+        Fotografías, cartas, mapas, periódicos y objetos que permiten reconstruir
+        distintas perspectivas del pasado, siempre con su procedencia a la vista.
+      </p>
+      <div class="article-meta">
+        <span>Archivo en construcción</span>
+        <span>Agua Prieta, Sonora</span>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Antes de explorar</span>
+        <h2>Cómo leer una pieza del archivo</h2>
+        <p class="lead">
+          Una imagen sin procedencia verificable no demuestra que represente el lugar,
+          la fecha o la persona que se le atribuye. Por eso cada pieza indica qué tipo de
+          material es.
+        </p>
+      </div>
+
+      <div class="criteria">
+        <!-- Condición 1: pieza original -->
+        <div class="criteria__item">
+          <span class="badge badge--original">Original</span>
+          <h3>Documento o fotografía de la época</h3>
+          <p>Material producido en el periodo que se estudia, con archivo y fecha identificados.</p>
+        </div>
+        <!-- Condición 2: reproducción -->
+        <div class="criteria__item">
+          <span class="badge badge--repro">Reproducción</span>
+          <h3>Copia de una pieza existente</h3>
+          <p>Digitalización o copia de un original conservado en otro archivo, con su fuente citada.</p>
+        </div>
+        <!-- Condición 3: interpretación -->
+        <div class="criteria__item">
+          <span class="badge badge--interp">Interpretación</span>
+          <h3>Ilustración o reconstrucción</h3>
+          <p>Imagen o mapa elaborado hoy para explicar. No es prueba documental.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. GALERÍA DE LA COLECCIÓN + PUBLICIDAD ====================== -->
+  <section class="section section--historia">
+    <div class="container">
+      <div class="layout-with-sidebar">
+
+        <!-- ---------- 4A. Columna principal ---------- -->
+        <div>
+
+          <div class="section-head">
+            <span class="eyebrow">Explorar la colección</span>
+            <h2>Piezas, imágenes y documentos</h2>
+            <p class="lead">
+              Esta colección está en formación. Los campos marcados como «Por completar»
+              se llenarán conforme se verifique cada pieza.
+            </p>
+          </div>
+
+          <!-- Filtros por tipo de material -->
+          <div class="hub-toolbar" data-filter-group="#colecciones-grid">
+            <button class="chip is-active" data-filter="all">Todo</button>
+            <button class="chip" data-filter="fotografias">Fotografías</button>
+            <button class="chip" data-filter="documentos">Documentos</button>
+            <button class="chip" data-filter="mapas">Mapas</button>
+            <button class="chip" data-filter="prensa">Prensa</button>
+            <button class="chip" data-filter="patrimonio">Patrimonio</button>
+          </div>
+
+          <!-- Cuadrícula de piezas. Cada <article> es una "ficha de pieza". -->
+          <div id="colecciones-grid" class="collection-grid">
+
+            <!-- Pieza 1 · Documento -->
+            <article class="collection-item" data-cat="documentos">
+              <div class="collection-item__media">
+                <span class="collection-item__tag">Documento</span>
+                <img src="IMG/plan_aguaprieta.jpg" alt="Plan de Agua Prieta, 1920" loading="lazy" />
+              </div>
+              <div class="collection-item__body">
+                <h3>Plan de Agua Prieta</h3>
+                <p>Documento proclamado en 1920, decisivo en la Revolución Mexicana.</p>
+                <dl class="collection-meta">
+                  <dt>Fecha</dt><dd>1920</dd>
+                  <dt>Autoría</dt><dd>Por completar</dd>
+                  <dt>Archivo</dt><dd>Por completar</dd>
+                  <dt>Derechos</dt><dd>Por verificar</dd>
+                </dl>
+                <span class="badge badge--pending">Condición por verificar</span>
+              </div>
+            </article>
+
+            <!-- Pieza 2 · Fotografía -->
+            <article class="collection-item" data-cat="fotografias">
+              <div class="collection-item__media">
+                <span class="collection-item__tag">Fotografía</span>
+                <img src="IMG/PanVilla1.jpg" alt="Retrato de Francisco Villa" loading="lazy" />
+              </div>
+              <div class="collection-item__body">
+                <h3>Francisco Villa</h3>
+                <p>Retrato del jefe de la División del Norte.</p>
+                <dl class="collection-meta">
+                  <dt>Fecha</dt><dd>Por completar</dd>
+                  <dt>Autoría</dt><dd>Por completar</dd>
+                  <dt>Archivo</dt><dd>Por completar</dd>
+                  <dt>Derechos</dt><dd>Por verificar</dd>
+                </dl>
+                <span class="badge badge--pending">Condición por verificar</span>
+              </div>
+            </article>
+
+            <!-- Pieza 3 · Patrimonio -->
+            <article class="collection-item" data-cat="patrimonio">
+              <div class="collection-item__media">
+                <span class="collection-item__tag">Patrimonio</span>
+                <img src="IMG/AntiguaAduana.jpeg" alt="Antigua Aduana de Agua Prieta" loading="lazy" />
+              </div>
+              <div class="collection-item__body">
+                <h3>Antigua Aduana</h3>
+                <p>Edificio concluido en 1918, símbolo del comercio fronterizo con Douglas, Arizona.</p>
+                <dl class="collection-meta">
+                  <dt>Fecha</dt><dd>1918 (edificio)</dd>
+                  <dt>Autoría</dt><dd>Por completar</dd>
+                  <dt>Archivo</dt><dd>Por completar</dd>
+                  <dt>Derechos</dt><dd>Por verificar</dd>
+                </dl>
+                <span class="badge badge--pending">Condición por verificar</span>
+              </div>
+            </article>
+
+            <!-- Pieza 4 · Mapa (pieza por elaborar) -->
+            <article class="collection-item" data-cat="mapas">
+              <div class="collection-item__media collection-item__media--empty">
+                <span class="collection-item__tag">Mapa</span>
+                <img src="IMG/mapa.jpeg" alt="Mapa del campo de batalla" loading="lazy" />
+              </div>
+              <div class="collection-item__body">
+                <h3>Mapa del campo de batalla</h3>
+                <p>Plano interpretativo de las posiciones y la geografía de Agua Prieta en 1915.</p>
+                <dl class="collection-meta">
+                  <dt>Fecha</dt><dd>Por completar</dd>
+                  <dt>Autoría</dt><dd>Por completar</dd>
+                  <dt>Archivo</dt><dd>Por completar</dd>
+                  <dt>Derechos</dt><dd>Por completar</dd>
+                </dl>
+                <span class="badge badge--interp">Interpretación (por elaborar)</span>
+              </div>
+            </article>
+
+            <!-- Pieza 5 · Prensa (pieza por localizar) -->
+            <article class="collection-item" data-cat="prensa">
+              <div class="collection-item__media collection-item__media--empty">
+                <span class="collection-item__tag">Prensa</span>
+                <img src="IMG/prensa.jpeg" alt="Prensa de la epoca" loading="lazy" />
+              </div>
+              <div class="collection-item__body">
+                <h3>Prensa de la época</h3>
+                <p>Periódicos de ambos lados de la frontera para contrastar versiones del combate.</p>
+                <dl class="collection-meta">
+                  <dt>Fecha</dt><dd>Por completar</dd>
+                  <dt>Autoría</dt><dd>Por completar</dd>
+                  <dt>Archivo</dt><dd>Por completar</dd>
+                  <dt>Derechos</dt><dd>Por completar</dd>
+                </dl>
+                <span class="badge badge--pending">Pieza por localizar</span>
+              </div>
+            </article>
+
+            <!-- Pieza 6 · Documentos (pieza por localizar) -->
+            <article class="collection-item" data-cat="documentos">
+              <div class="collection-item__media collection-item__media--empty">
+                <span class="collection-item__tag">Documento</span>
+                <img src="IMG/documento.jpeg" alt="imagen" loading="lazy" />
+              </div>
+              <div class="collection-item__body">
+                <h3>Cartas y partes militares</h3>
+                <p>Testimonios escritos de quienes participaron o vivieron los hechos.</p>
+                <dl class="collection-meta">
+                  <dt>Fecha</dt><dd>Por completar</dd>
+                  <dt>Autoría</dt><dd>Por completar</dd>
+                  <dt>Archivo</dt><dd>Por completar</dd>
+                  <dt>Derechos</dt><dd>Por completar</dd>
+                </dl>
+                <span class="badge badge--pending">Pieza por localizar</span>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Publicidad en móvil  -->
+          <div class="sponsored-inline" data-ad="espacio-colecciones-movil">
+            <span class="ad-label">Publicidad</span>
+            <p><strong>Espacio disponible.</strong> Tu negocio puede acompañar esta colección.</p>
+            <a href="contacto.html" class="btn btn--ghost btn--sm">Conocer opciones</a>
+          </div>
+
+        </div><!-- /4A -->
+
+        <!-- ---------- 4B. Publicidad escritorio ----------
+             Texto de ejemplo: reemplazar por un patrocinador real y mantener
+             siempre la etiqueta "Publicidad". -->
+        <aside class="sidebar-ad" aria-label="Publicidad">
+          <span class="ad-label">Publicidad</span>
+          <a href="contacto.html" class="ad-card" data-ad="espacio-colecciones">
+            <div class="ad-card__media" role="img" aria-label="Espacio publicitario disponible"></div>
+            <div class="ad-card__body">
+              <p class="ad-card__sponsor">Espacio disponible</p>
+              <h4>Tu negocio, dentro de la historia</h4>
+              <p>Presencia editorial junto al archivo de Villa y la Gran Guerra.</p>
+              <span class="btn btn--ghost btn--sm">Conocer opciones</span>
+            </div>
+          </a>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========== 5. CONVOCATORIA A LA COMUNIDAD===================================== -->
+  <section class="section section--tight" style="background: var(--c-bg-alt);">
+    <div class="container">
+      <div class="experience-cta" style="margin: 0;">
+        <h3>¿Tu familia conserva fotografías, cartas u objetos de la época?</h3>
+        <p>
+          Cada aportación se registra con su autoría y su procedencia, y se publica solo con
+          la autorización de quien la comparte. Así el archivo crece con la comunidad.
+        </p>
+        <a href="contacto.html" class="btn btn--outline">Colaborar con el archivo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========6. CONTENIDO RELACIONADO======================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Contenido relacionado</span>
+        <h2>Sigue descubriendo</h2>
+      </div>
+      <div class="related-grid">
+        <a href="historia.html" class="card">
+          <div class="card__body">
+            <p class="card__kicker">Historia</p>
+            <h3 class="card__title">Agua Prieta, 1915</h3>
+            <p class="card__text">La frontera donde la Revolución cambió de rumbo.</p>
+          </div>
+        </a>
+        <a href="experiencias.html" class="card">
+          <div class="card__body">
+            <p class="card__kicker">Experiencias</p>
+            <h3 class="card__title">Vive la historia</h3>
+            <p class="card__text">Narrativa, mapas y conversación con investigadores.</p>
+          </div>
+        </a>
+        <a href="noticias.html" class="card">
+          <div class="card__body">
+            <p class="card__kicker">Noticias y blog</p>
+            <h3 class="card__title">El norte, en presente</h3>
+            <p class="card__text">Investigación, cultura y novedades del territorio.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       7. FUENTES Y CONSULTA
+       Estas instituciones son las listadas en la investigación del
+       proyecto. Son lugares donde consultar colecciones; no significa que
+       las piezas de esta página provengan de ellas hasta que se indique
+       en cada ficha.
+       ===================================================================== -->
+  <section class="section section--tight" style="background: var(--c-bg-alt);">
+    <div class="container">
+      <div class="sources" aria-labelledby="fuentes-colecciones">
+        <h2 id="fuentes-colecciones">Fuentes y consulta</h2>
+        <p class="sources__note">
+          Esta sección es una síntesis divulgativa. Las fechas, cifras y atribuciones deben
+          contrastarse con fuentes primarias y académicas antes de usarse como investigación.
+        </p>
+        <ol>
+          <li>Mediateca INAH. Colecciones de fotografías, documentos y objetos históricos. <a href="https://mediateca.inah.gob.mx/" target="_blank" rel="noopener">mediateca.inah.gob.mx</a></li>
+          <li>Archivo General de la Nación (AGN). Fondos documentales para la historia de México. <a href="https://www.gob.mx/agn" target="_blank" rel="noopener">gob.mx/agn</a></li>
+          <li>Biblioteca Digital Mexicana. Documentos históricos digitalizados. <a href="https://bdmx.mx/" target="_blank" rel="noopener">bdmx.mx</a></li>
+          <li>INEHRM. Publicaciones y materiales de la Revolución Mexicana. <a href="https://inehrm.gob.mx/" target="_blank" rel="noopener">inehrm.gob.mx</a></li>
+          <li>INAH. Patrimonio histórico, arqueología y museos. <a href="https://www.inah.gob.mx/" target="_blank" rel="noopener">inah.gob.mx</a></li>
+          <li>UNAM, Instituto de Investigaciones Históricas. <a href="https://historicas.unam.mx/" target="_blank" rel="noopener">historicas.unam.mx</a></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  <!-- =========== 8. PIE DE PÁGINA================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Villa y la Gran Guerra</h4>
+          <p style="color: rgba(251,245,232,.7); max-width: 320px;">
+            Centro Internacional de Divulgación Científica e Histórica del Norte de México.
+            Investigación, patrimonio y territorio desde Agua Prieta, Sonora.
+          </p>
+        </div>
+        <div>
+          <h4>Secciones</h4>
+          <ul>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="turismo.html">Turismo</a></li>
+            <li><a href="sonora.html">Sonora</a></li>
+            <li><a href="experiencias.html">Experiencias</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Investigación</h4>
+          <ul>
+            <li><a href="#">Museo Vivo</a></li>
+            <li><a href="#">Campo de Batalla</a></li>
+            <li><a href="colecciones.html">Colecciones</a></li>
+            <li><a href="#">Archivo</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="contacto.html">Prensa</a></li>
+            <li><a href="contacto.html">Colaboraciones</a></li>
+            <li><a href="contacto.html">Publicidad</a></li>
+            <li><a href="#">Aviso legal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Villa y la Gran Guerra · ITAP</span>
+        <span>Agua Prieta, Sonora · Norte de México</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
