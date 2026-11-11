@@ -1203,6 +1203,135 @@ textarea.form-control { min-height: 140px; resize: vertical; }
 .quick-link__body h3 { font-size: 1rem; margin-bottom: .15rem; }
 .quick-link__body p { font-size: .8rem; color: var(--c-ink-mute); margin: 0; }
 
+/* ---------- 25. COLECCIONES · criterios y fichas ---------- */
+.criteria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+.criteria__item {
+  padding: 1.4rem 1.3rem;
+  background: var(--c-paper);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+}
+.criteria__item h3 {
+  font-size: 1.05rem;
+  margin: .7rem 0 .4rem;
+}
+.criteria__item p {
+  font-size: .85rem;
+  color: var(--c-ink-mute);
+  margin: 0;
+}
+
+/* Badges de condición */
+.badge {
+  display: inline-block;
+  padding: .25rem .65rem;
+  font-family: var(--f-body);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  line-height: 1.4;
+}
+.badge--original {
+  background: #e8f0e5;
+  color: #2f5020;
+}
+.badge--repro {
+  background: #e8eef5;
+  color: #2f4f70;
+}
+.badge--interp {
+  background: #f5eede;
+  color: #7a5a1e;
+}
+.badge--pending {
+  background: var(--c-bg-alt);
+  color: var(--c-ink-mute);
+  border: 1px dashed var(--c-border-d);
+}
+
+/* Ficha de pieza: metadatos */
+.collection-meta {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: .2rem .8rem;
+  margin: .8rem 0 .7rem;
+  font-size: .74rem;
+  line-height: 1.5;
+}
+.collection-meta dt {
+  font-weight: 600;
+  color: var(--c-ink-mute);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  font-size: .66rem;
+  padding-top: .1rem;
+}
+.collection-meta dd {
+  color: var(--c-ink-soft);
+  margin: 0;
+}
+
+/* Placeholder de imagen vacía */
+.collection-item__media--empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  color: var(--c-ink-mute);
+  font-size: .78rem;
+  font-style: italic;
+  border: 1px dashed var(--c-border-d);
+}
+
+/* Bloque de fuentes */
+.sources {
+  max-width: 760px;
+}
+.sources h2 {
+  font-size: 1.5rem;
+  margin-bottom: .6rem;
+}
+.sources__note {
+  font-size: .85rem;
+  color: var(--c-ink-mute);
+  font-style: italic;
+  margin-bottom: 1.2rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--c-border-d);
+}
+.sources ol {
+  list-style: decimal;
+  padding-left: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  font-size: .88rem;
+  color: var(--c-ink-soft);
+}
+.sources ol a {
+  color: var(--c-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.sources ol a:hover { color: var(--c-primary-d); }
+
+/* Ajuste responsive */
+@media (max-width: 960px) {
+  .criteria { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .collection-meta { font-size: .72rem; }
+}
+
+
 /* ---------- 24. RESPONSIVE ADICIONAL ---------- */
 @media (max-width: 1080px) {
   .listing { grid-template-columns: repeat(2, 1fr); }
