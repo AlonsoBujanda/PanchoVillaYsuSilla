@@ -300,3 +300,55 @@ document.addEventListener('DOMContentLoaded', () => {
     console.warn('DATA_NOTICIAS no está definido. ¿Falta <script src="data/noticias.js">?');
   }
 });
+
+/* ---------- 9. Galería interactiva Museo Vivo ---------- */
+
+const museoBotones = document.querySelectorAll(
+  '.museo-miniatura'
+);
+
+const museoImagen = document.getElementById(
+  'museo-imagen-principal'
+);
+
+const museoTitulo = document.getElementById(
+  'museo-titulo'
+);
+
+const museoCategoria = document.getElementById(
+  'museo-categoria'
+);
+
+const museoDescripcion = document.getElementById(
+  'museo-descripcion'
+);
+
+if (
+  museoImagen &&
+  museoTitulo &&
+  museoCategoria &&
+  museoDescripcion
+) {
+  museoBotones.forEach(boton => {
+
+    boton.addEventListener('click', () => {
+
+      museoBotones.forEach(item => {
+        item.classList.remove('is-active');
+      });
+
+      boton.classList.add('is-active');
+
+      museoImagen.src = boton.dataset.museoImagen;
+      museoTitulo.textContent = boton.dataset.museoTitulo;
+      museoCategoria.textContent =
+        boton.dataset.museoCategoria;
+      museoDescripcion.textContent =
+        boton.dataset.museoDescripcion;
+
+      museoImagen.alt = boton.dataset.museoTitulo;
+
+    });
+
+  });
+}

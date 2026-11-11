@@ -1,0 +1,494 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Museo Vivo | Villa y la Gran Guerra</title>
+  <meta name="description" content="Explora fotografías, documentos y acontecimientos de la Revolución Mexicana y Agua Prieta de 1915.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- CABECERA -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+
+      <a href="index.html" class="brand">
+        <span class="brand__name">
+          Villa y la Gran Guerra
+          <small>Norte de México</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="index.html">Índice</a>
+        <a href="historia.html">Historia</a>
+        <a href="turismo.html">Turismo</a>
+        <a href="sonora.html">Sonora</a>
+        <a href="experiencias.html">Experiencias</a>
+        <a href="museo-vivo.html" aria-current="page">Museo Vivo</a>
+        <a href="campo-batalla.html">Campo de Batalla</a>
+        <a href="colecciones.html">Colecciones</a>
+        <a href="noticias.html">Noticias</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+      <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PORTADA -->
+  <section class="article-hero museo-hero">
+    <div class="article-hero__bg"></div>
+
+    <div class="container article-hero__content">
+      <span class="eyebrow">
+        Patrimonio · Historia · Memoria
+      </span>
+
+      <h1 class="article-hero__title">
+        Museo Vivo:
+        el pasado vuelve a cobrar vida
+      </h1>
+
+      <p class="article-hero__lead">
+        La historia no solamente se encuentra en los libros.
+        También vive en las fotografías, los documentos
+        y las memorias de quienes nos precedieron.
+      </p>
+
+      <div class="article-meta">
+        <span>Agua Prieta, Sonora</span>
+        <span>Revolución Mexicana</span>
+        <span>Patrimonio histórico</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESENTACIÓN -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Bienvenido al museo</span>
+        <h2>Una ventana al pasado</h2>
+        <p class="lead">
+          Cada imagen guarda una historia.
+          Cada documento conserva una voz.
+          Cada recuerdo forma parte de nuestra identidad.
+        </p>
+      </div>
+
+      <div class="article-body">
+        <p>
+          El Museo Vivo es un espacio digital dedicado
+          a acercar la historia de Agua Prieta y de la
+          Revolución Mexicana a nuevas generaciones.
+          A través de fotografías, relatos y materiales
+          históricos, los visitantes pueden conocer
+          acontecimientos que transformaron el norte
+          de México.
+        </p>
+
+        <p>
+          La Batalla de Agua Prieta de 1915 representa
+          uno de los episodios más importantes de esta
+          historia. En ella se enfrentaron las fuerzas
+          de Francisco Villa y las tropas constitucionalistas
+          dirigidas por Plutarco Elías Calles.
+        </p>
+
+        <p>
+          Este museo digital busca mostrar que la historia
+          no es únicamente una sucesión de fechas.
+          También está formada por personas, decisiones,
+          lugares y experiencias que dejaron huella
+          en nuestra sociedad.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISOR INTERACTIVO -->
+  <section class="section museo-seccion-oscura">
+    <div class="container">
+
+      <div class="section-head">
+        <span class="eyebrow">Galería histórica</span>
+        <h2>Explora nuestra memoria visual</h2>
+        <p class="lead">
+          Selecciona una fotografía para descubrir
+          parte de la historia que representa.
+        </p>
+      </div>
+
+      <div class="museo-galeria">
+
+        <div class="museo-visor">
+          <img
+            id="museo-imagen-principal"
+            src="IMG/museo-villa.jpg"
+            alt="Francisco Villa durante la Revolución Mexicana"
+          >
+
+          <div class="museo-visor-info">
+            <span id="museo-categoria">
+              Personajes históricos
+            </span>
+            <h3 id="museo-titulo">
+              Francisco Villa
+            </h3>
+            <p id="museo-descripcion">
+              Uno de los principales líderes de la
+              Revolución Mexicana y comandante
+              de la División del Norte.
+            </p>
+          </div>
+        </div>
+
+        <div class="museo-selector">
+
+          <button
+            class="museo-miniatura is-active"
+            type="button"
+            data-museo-imagen="IMG/museo-villa.jpg"
+            data-museo-titulo="Francisco Villa"
+            data-museo-categoria="Personajes históricos"
+            data-museo-descripcion="Francisco Villa fue comandante de la División del Norte y protagonista de importantes campañas militares durante la Revolución Mexicana."
+          >
+            <img src="IMG/museo-villa.jpg" alt="">
+            <span>Francisco Villa</span>
+          </button>
+
+          <button
+            class="museo-miniatura"
+            type="button"
+            data-museo-imagen="IMG/museo-aguaprieta.jpg"
+            data-museo-titulo="Agua Prieta histórica"
+            data-museo-categoria="Memoria de la ciudad"
+            data-museo-descripcion="Agua Prieta se desarrolló como una ciudad fronteriza vinculada con el ferrocarril, la minería y los acontecimientos revolucionarios."
+          >
+            <img src="IMG/museo-aguaprieta.jpg" alt="">
+            <span>Agua Prieta</span>
+          </button>
+
+          <button
+            class="museo-miniatura"
+            type="button"
+            data-museo-imagen="IMG/museo-soldados.jpg"
+            data-museo-titulo="Los ejércitos revolucionarios"
+            data-museo-categoria="Revolución Mexicana"
+            data-museo-descripcion="Las fuerzas revolucionarias participaron en enfrentamientos que transformaron el panorama político y militar de México."
+          >
+            <img src="IMG/museo-soldados.jpg" alt="">
+            <span>La Revolución</span>
+          </button>
+
+          <button
+            class="museo-miniatura"
+            type="button"
+            data-museo-imagen="IMG/museo-documentos.jpg"
+            data-museo-titulo="Documentos que hicieron historia"
+            data-museo-categoria="Archivo documental"
+            data-museo-descripcion="Los documentos históricos permiten estudiar los acontecimientos del pasado y comprender las decisiones que marcaron una época."
+          >
+            <img src="IMG/museo-documentos.jpg" alt="">
+            <span>Documentos</span>
+          </button>
+
+        </div>
+      </div>
+
+      <p class="museo-nota">
+        Las fotografías deben identificarse con su fecha,
+        procedencia y autor cuando esos datos estén disponibles.
+      </p>
+    </div>
+  </section>
+
+  <!-- ARCHIVO HISTÓRICO -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-head">
+        <span class="eyebrow">Explora el patrimonio</span>
+        <h2>Los tesoros de nuestra historia</h2>
+        <p class="lead">
+          Descubre los elementos que permiten reconstruir
+          la memoria histórica de una comunidad.
+        </p>
+      </div>
+
+      <div class="listing">
+
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="IMG/museo-fotografias.jpg"
+                 alt="Fotografías históricas"
+                 loading="lazy">
+          </div>
+          <div class="card__body">
+            <p class="card__kicker">Archivo visual</p>
+            <h3 class="card__title">
+              Fotografías del pasado
+            </h3>
+            <p class="card__text">
+              Las imágenes antiguas permiten conocer
+              los rostros, lugares y acontecimientos
+              que formaron parte de la historia.
+            </p>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="IMG/museo-documentos.jpg"
+                 alt="Documentos históricos"
+                 loading="lazy">
+          </div>
+          <div class="card__body">
+            <p class="card__kicker">Archivo documental</p>
+            <h3 class="card__title">
+              Documentos históricos
+            </h3>
+            <p class="card__text">
+              Cartas, periódicos, registros y otros
+              documentos ayudan a comprender los
+              acontecimientos de distintas épocas.
+            </p>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="IMG/museo-objetos.jpg"
+                 alt="Objetos históricos"
+                 loading="lazy">
+          </div>
+          <div class="card__body">
+            <p class="card__kicker">Patrimonio material</p>
+            <h3 class="card__title">
+              Objetos con historia
+            </h3>
+            <p class="card__text">
+              Los objetos cotidianos, herramientas
+              y piezas antiguas ayudan a conocer
+              las formas de vida del pasado.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CRONOLOGÍA -->
+  <section class="section" style="background:var(--c-bg-alt)">
+    <div class="container">
+
+      <div class="section-head">
+        <span class="eyebrow">Viaje en el tiempo</span>
+        <h2>Momentos que marcaron nuestra historia</h2>
+      </div>
+
+      <div class="article-body">
+        <ul class="timeline">
+
+          <li>
+            <span class="timeline__year">1910</span>
+            <p class="timeline__text">
+              Comienza la Revolución Mexicana,
+              movimiento que transformó la vida
+              política y social del país.
+            </p>
+          </li>
+
+          <li>
+            <span class="timeline__year">1913</span>
+            <p class="timeline__text">
+              Tras el asesinato de Francisco I. Madero,
+              se intensifican los enfrentamientos
+              entre distintas fuerzas revolucionarias.
+            </p>
+          </li>
+
+          <li>
+            <span class="timeline__year">1915</span>
+            <p class="timeline__text">
+              Se desarrolla la Batalla de Agua Prieta,
+              donde las fuerzas constitucionalistas
+              derrotan al ejército de Francisco Villa.
+            </p>
+          </li>
+
+          <li>
+            <span class="timeline__year">1920</span>
+            <p class="timeline__text">
+              Se proclama el Plan de Agua Prieta,
+              acontecimiento decisivo en la
+              política mexicana de la época.
+            </p>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPORTANCIA DEL MUSEO -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-head">
+        <span class="eyebrow">Nuestra memoria</span>
+        <h2>¿Por qué conservar la historia?</h2>
+      </div>
+
+      <div class="article-body">
+        <p>
+          Conservar el patrimonio histórico significa
+          proteger los testimonios que permiten conocer
+          el origen y la transformación de nuestra sociedad.
+        </p>
+
+        <p>
+          Los archivos, fotografías y relatos nos ayudan
+          a comprender cómo vivían las generaciones
+          anteriores y cuáles fueron los acontecimientos
+          que influyeron en nuestro presente.
+        </p>
+
+        <p>
+          Las herramientas digitales ofrecen nuevas
+          oportunidades para compartir estos materiales
+          y acercarlos a estudiantes, investigadores
+          y visitantes interesados en la historia.
+        </p>
+
+        <div class="experience-cta">
+          <h3>La historia también se descubre explorando</h3>
+          <p>
+            Conoce el escenario donde se enfrentaron
+            las fuerzas villistas y constitucionalistas
+            durante la Batalla de Agua Prieta.
+          </p>
+
+          <a href="campo-batalla.html" class="btn btn--outline">
+            Explorar Campo de Batalla
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENIDO RELACIONADO -->
+  <section class="section" style="background:var(--c-bg-alt)">
+    <div class="container">
+
+      <div class="section-head">
+        <span class="eyebrow">Continúa explorando</span>
+        <h2>Descubre más de nuestra historia</h2>
+      </div>
+
+      <div class="related-grid">
+
+        <a href="historia.html" class="card reveal">
+          <div class="card__body">
+            <p class="card__kicker">Historia</p>
+            <h3 class="card__title">Agua Prieta 1915</h3>
+            <p class="card__text">
+              Conoce los hechos y personajes
+              de la batalla.
+            </p>
+          </div>
+        </a>
+
+        <a href="campo-batalla.html" class="card reveal">
+          <div class="card__body">
+            <p class="card__kicker">Campo de Batalla</p>
+            <h3 class="card__title">El escenario histórico</h3>
+            <p class="card__text">
+              Descubre las estrategias militares
+              y consecuencias del enfrentamiento.
+            </p>
+          </div>
+        </a>
+
+        <a href="colecciones.html" class="card reveal">
+          <div class="card__body">
+            <p class="card__kicker">Colecciones</p>
+            <h3 class="card__title">Explora los archivos</h3>
+            <p class="card__text">
+              Descubre fotografías, documentos
+              y otros materiales históricos.
+            </p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div>
+          <h4>Villa y la Gran Guerra</h4>
+          <p style="color:rgba(251,245,232,.7)">
+            Centro Internacional de Divulgación Científica
+            e Histórica del Norte de México.
+          </p>
+        </div>
+
+        <div>
+          <h4>Secciones</h4>
+          <ul>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="turismo.html">Turismo</a></li>
+            <li><a href="sonora.html">Sonora</a></li>
+            <li><a href="experiencias.html">Experiencias</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Investigación</h4>
+          <ul>
+            <li><a href="museo-vivo.html">Museo Vivo</a></li>
+            <li><a href="campo-batalla.html">Campo de Batalla</a></li>
+            <li><a href="colecciones.html">Colecciones</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="contacto.html">Prensa</a></li>
+            <li><a href="contacto.html">Colaboraciones</a></li>
+            <li><a href="contacto.html">Publicidad</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Villa y la Gran Guerra · ITAP</span>
+        <span>Agua Prieta, Sonora · Norte de México</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

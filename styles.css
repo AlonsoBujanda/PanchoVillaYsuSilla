@@ -1486,3 +1486,241 @@ textarea.form-control { min-height: 140px; resize: vertical; }
 @media (max-width: 960px) {
   .collection-meta { font-size: .72rem; }
 }
+
+/* =================================================
+   25. CAMPO DE BATALLA
+   Estilos adicionales de la sección histórica
+   ================================================= */
+
+/* Imagen principal de portada */
+.campo-hero .article-hero__bg {
+  background-image:
+    linear-gradient(
+      rgba(26, 15, 8, .35),
+      rgba(26, 15, 8, .65)
+    ),
+    url("IMG/batalla-portada.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* Mapa histórico */
+.campo-mapa {
+  box-shadow: var(--sh-lg);
+  background: #2a1a10;
+}
+
+.campo-mapa .battle-map__layer {
+  background-image: url("IMG/batalla-mapa.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Nota debajo del mapa */
+.campo-nota {
+  font-size: .85rem;
+  font-style: italic;
+  color: var(--c-ink-mute);
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/* Separación de botones en tarjetas */
+.campo-hero .article-meta {
+  margin-top: 2rem;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 720px) {
+
+  .campo-hero .article-hero__content {
+    padding-block: 4rem;
+  }
+
+  .campo-mapa {
+    aspect-ratio: 4 / 3;
+  }
+
+  .campo-mapa .battle-map__legend {
+    left: .6rem;
+    bottom: .6rem;
+  }
+
+  .campo-nota {
+    font-size: .75rem;
+  }
+}
+
+
+/* =====================================================
+   26. MUSEO VIVO
+   ===================================================== */
+
+/* Portada */
+.museo-hero .article-hero__bg {
+  background-image:
+    linear-gradient(
+      rgba(26,15,8,.35),
+      rgba(26,15,8,.75)
+    ),
+    url("IMG/museo-portada.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* Fondo de la galería */
+.museo-seccion-oscura {
+  background: #241a14;
+}
+
+.museo-seccion-oscura .section-head h2 {
+  color: var(--c-paper);
+}
+
+.museo-seccion-oscura .section-head .lead {
+  color: var(--c-accent-l);
+}
+
+.museo-seccion-oscura .eyebrow {
+  color: var(--c-accent-l);
+}
+
+.museo-seccion-oscura .eyebrow::before {
+  background: var(--c-accent-l);
+}
+
+/* Distribución de la galería */
+.museo-galeria {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* Visor principal */
+.museo-visor {
+  position: relative;
+  min-height: 450px;
+  background: #100b08;
+  border: 1px solid var(--c-border-d);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.museo-visor > img {
+  width: 100%;
+  height: 520px;
+  object-fit: contain;
+  background: #100b08;
+  filter: sepia(.2);
+}
+
+/* Información sobre la imagen */
+.museo-visor-info {
+  position: relative;
+  padding: 1.5rem;
+  background: #17100c;
+  border-top: 2px solid var(--c-accent);
+}
+
+.museo-visor-info span {
+  display: block;
+  font-size: .7rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--c-accent-l);
+  margin-bottom: .5rem;
+}
+
+.museo-visor-info h3 {
+  color: var(--c-paper);
+  margin-bottom: .5rem;
+}
+
+.museo-visor-info p {
+  color: rgba(251,245,232,.8);
+  font-size: .9rem;
+  margin: 0;
+}
+
+/* Selector de fotografías */
+.museo-selector {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.museo-miniatura {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  width: 100%;
+  padding: .6rem;
+  text-align: left;
+  background: #36271d;
+  border: 1px solid #68513d;
+  border-radius: var(--radius-md);
+  color: var(--c-paper);
+  cursor: pointer;
+  transition: all var(--t-base);
+}
+
+.museo-miniatura:hover {
+  background: #493427;
+  transform: translateX(-3px);
+}
+
+.museo-miniatura.is-active {
+  border-color: var(--c-accent);
+  background: #543625;
+}
+
+.museo-miniatura img {
+  width: 75px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  filter: sepia(.3);
+  flex-shrink: 0;
+}
+
+.museo-miniatura span {
+  font-size: .85rem;
+  font-weight: 600;
+}
+
+/* Nota de fotografías */
+.museo-nota {
+  margin-top: 1.5rem;
+  color: rgba(251,245,232,.65);
+  font-size: .8rem;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .museo-galeria {
+    grid-template-columns: 1fr;
+  }
+
+  .museo-selector {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .museo-visor > img {
+    height: 300px;
+  }
+
+  .museo-selector {
+    grid-template-columns: 1fr;
+  }
+
+  .museo-visor-info {
+    padding: 1rem;
+  }
+}
