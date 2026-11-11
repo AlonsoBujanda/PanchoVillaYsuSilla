@@ -521,7 +521,7 @@ p:last-child { margin-bottom: 0; }
 }
 .article-hero__bg {
   position: absolute; inset: 0;
-  background-image: url('https://picsum.photos/seed/batalla1915/1600/900');
+  background-image: url('IMG/villa_batalla.gif');
   background-size: cover;
   background-position: center;
   filter: sepia(.6) contrast(1.05) brightness(.7);
